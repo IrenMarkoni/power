@@ -8,7 +8,7 @@ body {
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   line-height: 137%;
-  color: #4d4d50;
+  color: #000;
   -webkit-tap-highlight-color: transparent;
 }
 body,
@@ -162,8 +162,8 @@ h1 {
 }
 .quote__author {
   font-size: 20px;
-  animation: animation-name 5000ms ease;
-  animation-delay: 300ms;
+  /* animation: animation-name 5000ms ease; */
+  /* animation-delay: 300ms; */
 }
 
 @keyframes animation-name {
@@ -176,9 +176,7 @@ h1 {
     transform: translateY(0);
   }
 }
-.options {
-  padding: 80px 0;
-}
+
 .options__item-content,
 .options__item-contacts {
   padding: 30px 0 0 0;
@@ -233,7 +231,7 @@ h1 {
 .options__item-dropdown {
   display: none;
   /* padding: 30px 20px 20px 20px; */
-  color: #555;
+  color: #000;
 }
 .options__item-list:not(:last-child) {
   margin: 0 0 20px 0;
@@ -286,7 +284,7 @@ p + .options__item-list {
   opacity: 1;
 } */
 .table {
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
 }
 .table_4 .table-row {
   display: grid;
@@ -316,6 +314,9 @@ p + .options__item-list {
   border-left: 1px solid grey;
   font-size: 14px;
 }
+.table_travel {
+  margin: 0 0 20px 0;
+}
 .table_travel .table-row {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -323,13 +324,18 @@ p + .options__item-list {
   border-left: 1px solid grey;
   font-size: 14px;
 }
-.table_sport .table-full {
-  grid-template-columns: 1/6;
-  border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
-  border-right: 1px solid grey;
-
+.table-full {
   padding: 10px;
+}
+.table_travel .table-full {
+  grid-column: 1/6;
+}
+.table_travel .table-row div:first-child {
+  font-weight: 600;
+  font-size: 16px;
+}
+.table_sport .table-full {
+  grid-column: 1/6;
 }
 .table-full p {
   font-size: 20px;
@@ -417,4 +423,36 @@ p + .options__item-list {
 }
 .feeding {
   margin: 0 0 30px 0;
+}
+strong + .options__item-text {
+  margin: 10px 0 20px 0;
+}
+.profs {
+  display: flex;
+  /* grid-template-columns: repeat(2, 1fr); */
+  margin: 20px 0 0 0;
+  max-width: 700px;
+  gap: 20px;
+}
+.profs span {
+  display: block;
+  position: relative;
+  padding: 0 0 0 10px;
+}
+.profs span::before {
+  display: block;
+  content: "-";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+p + h3 {
+  margin: 10px 0;
+}
+h2 {
+  font-size: 30px;
+  line-height: 120%;
+  margin: 0 0 50px 0;
 }

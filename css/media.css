@@ -4,6 +4,9 @@
   .container {
     padding: 0 20px;
   }
+  .introduction__wrapper {
+    gap: 40px 30px;
+  }
 }
 @media screen and (max-width: 992px) {
   h1 {
@@ -14,6 +17,54 @@
     padding: 20px 15px;
   }
   .introduction {
+    padding: 30px 0;
+  }
+  .introduction__wrapper {
+    gap: 30px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px 0 0 0;
+  }
+  .introduction__item {
+    padding: 20px;
+  }
+  .introduction__item:first-child {
+    grid-column: 1/3;
+    grid-row: 1/2;
+  }
+  .options__item-header {
+    grid-template-columns: 1fr 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+  .options__item-header::after {
+    width: 15px;
+    height: 15px;
+  }
+  .introduction__item-title {
+    font-size: 20px;
+  }
+  .introduction__item-text {
+    color: #fff;
+    font-size: 16px;
+  }
+  .introduction__descr {
+    font-size: 16px;
+  }
+  .quote__text {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+  .quote__author {
+    font-size: 14px;
+  }
+  .quote__content {
+    grid-template-columns: 200px 1fr;
+    gap: 20px;
+  }
+  .quote__img img {
+    width: 100%;
+  }
+  .quote {
     padding: 50px 0;
   }
 }
@@ -26,11 +77,21 @@
   }
   .table {
     width: calc(100% + 30px);
-    margin: 20px 0 0 -15px;
+    margin: 20px 0 20px -15px;
     overflow: auto;
   }
   .table-wrapper {
     width: max-content;
+  }
+  .table_4-qual .table-row {
+    grid-template-columns: repeat(4, 200px);
+  }
+  .table_travel .table-row,
+  .table_sport .table-row {
+    grid-template-columns: repeat(5, 200px);
+  }
+  .table-full p {
+    text-align: left;
   }
 }
 @media screen and (max-width: 576px) {
@@ -42,9 +103,32 @@
     flex-direction: column;
     gap: 20px;
   }
+  .quote {
+    padding: 30px 0;
+  }
+  .quote__content {
+    grid-template-columns: 80px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .quote__text {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+  }
+  .quote__author {
+    font-size: 12px;
+  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
+  .introduction__wrapper {
+    grid-template-columns: 100%;
+    gap: 20px;
+    margin: 30px 0 0 0;
+  }
+  .introduction__item:first-child {
+    grid-column: 1/2;
+  }
 }
 @media screen and (max-width: 380px) {
 }
