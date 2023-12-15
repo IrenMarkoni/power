@@ -5,7 +5,9 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Nunito Sans", sans-serif;
+  /* font-family: "Nunito Sans", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  font-family: "Jost", sans-serif;
   font-size: 16px;
   line-height: 137%;
   color: #000;
@@ -99,7 +101,7 @@ h1 {
 .introduction__wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px 40px;
+  gap: 30px;
   margin: 80px 0 0 0;
 }
 .introduction__item {
@@ -112,6 +114,11 @@ h1 {
   border-radius: 7px;
   display: block;
   text-decoration: none;
+  text-align: center;
+}
+.introduction__item-icon img {
+  width: 60px;
+  height: 60px;
 }
 .introduction__item-title {
   color: #fff;
@@ -285,33 +292,36 @@ p + .options__item-list {
 } */
 .table {
   margin: 20px 0 20px 0;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-radius: 7px;
 }
 .table_4 .table-row {
   display: grid;
   grid-template-columns: 50px 1fr 3fr 5fr;
   border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  /* border-left: 1px solid grey; */
   font-size: 14px;
 }
 .table_5 .table-row {
   display: grid;
   grid-template-columns: 50px 2.5fr 3fr 2fr 3fr;
   border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  /* border-left: 1px solid grey; */
   font-size: 14px;
 }
 .table_4-qual .table-row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  /* border-left: 1px solid grey; */
   font-size: 14px;
 }
 .table_sport .table-row {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr 2fr 1fr;
   border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  /* border-left: 1px solid grey; */
   font-size: 14px;
 }
 .table_travel {
@@ -321,7 +331,7 @@ p + .options__item-list {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   border-bottom: 1px solid grey;
-  border-left: 1px solid grey;
+  /* border-left: 1px solid grey; */
   font-size: 14px;
 }
 .table-full {
@@ -353,6 +363,8 @@ p + .options__item-list {
 }
 .table-row div {
   padding: 12px 10px;
+}
+.table-row div:not(:last-child) {
   border-right: 1px solid grey;
 }
 .table-row span {
@@ -365,7 +377,14 @@ p + .options__item-list {
 .table-head {
   border-top: 1px solid grey;
   font-weight: 600;
-  font-size: 20px !important;
+  font-size: 16px !important;
+  border-radius: 7px 7px 0 0;
+}
+.table-row:last-child {
+  border-radius: 0 0 7px 7px;
+}
+.health .table-head {
+  background: #009999;
 }
 .services {
   display: grid;
